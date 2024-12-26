@@ -561,6 +561,19 @@ sdb/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/sdb.dir/build.make tools/CMakeFiles/sdb.dir/build
 .PHONY : sdb/fast
 
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/tests.dir/build.make test/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -604,6 +617,7 @@ help:
 	@echo "... NightlyUpdate"
 	@echo "... libsdb"
 	@echo "... sdb"
+	@echo "... tests"
 .PHONY : help
 
 

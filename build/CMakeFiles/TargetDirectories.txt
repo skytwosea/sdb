@@ -49,6 +49,7 @@
 /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/tools/CMakeFiles/install.dir
 /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/tools/CMakeFiles/install/local.dir
 /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/tools/CMakeFiles/install/strip.dir
+/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/test/CMakeFiles/tests.dir
 /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/test/CMakeFiles/test.dir
 /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/test/CMakeFiles/edit_cache.dir
 /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/test/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,17 @@
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/c++
+All requested packages are currently installed.
+Total install time: 368 ns
+catch2 provides pkg-config modules:
+
+  # A modern, C++-native test framework for C++14 and above (links in default main)
+  catch2-with-main
+
+  # A modern, C++-native, test framework for C++14 and above
+  catch2
+
+libedit provides pkg-config modules:
+
+  # command line editor library provides generic line editing, history, and tokenization functions.
+  libedit
+

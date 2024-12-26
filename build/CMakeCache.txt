@@ -256,6 +256,9 @@ CTEST_SUBMIT_RETRY_COUNT:STRING=3
 //How long to wait between timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_DELAY:STRING=5
 
+//The directory containing a CMake configuration file for Catch2.
+Catch2_DIR:PATH=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/share/catch2 (Case Conflict)
+
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
@@ -271,6 +274,12 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Name of the computer/site where compile is being run
 SITE:STRING=MachineCity
 
@@ -278,15 +287,34 @@ SITE:STRING=MachineCity
 // executables.
 VCPKG_APPLOCAL_DEPS:BOOL=ON
 
+//Additional options to bootstrap vcpkg
+VCPKG_BOOTSTRAP_OPTIONS:STRING=
+
 //The directory which contains the installed libraries for each
 // triplet
-VCPKG_INSTALLED_DIR:PATH=/home/vesper/Dropbox/dev/building_a_debugger/vcpkg/installed
+VCPKG_INSTALLED_DIR:PATH=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed
+
+//Additional install options to pass to vcpkg
+VCPKG_INSTALL_OPTIONS:STRING=
 
 //The path to the vcpkg manifest directory.
-VCPKG_MANIFEST_DIR:PATH=
+VCPKG_MANIFEST_DIR:PATH=/home/vesper/Dropbox/dev/building_a_debugger/sdb
+
+//Install the dependencies listed in your manifest:
+//\n    If this is off, you will have to manually install your dependencies.
+//\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md
+// for more info.
+//\n
+VCPKG_MANIFEST_INSTALL:BOOL=ON
 
 //Use manifest mode, as opposed to classic mode.
-VCPKG_MANIFEST_MODE:BOOL=OFF
+VCPKG_MANIFEST_MODE:BOOL=ON
+
+//Overlay ports to use for vcpkg install in manifest mode
+VCPKG_OVERLAY_PORTS:STRING=
+
+//Overlay triplets to use for vcpkg install in manifest mode
+VCPKG_OVERLAY_TRIPLETS:STRING=
 
 //Appends the vcpkg paths to CMAKE_PREFIX_PATH, CMAKE_LIBRARY_PATH
 // and CMAKE_FIND_ROOT_PATH so that vcpkg libraries/packages are
@@ -318,7 +346,13 @@ Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 
 //The directory which contains the installed libraries for each
 // triplet
-_VCPKG_INSTALLED_DIR:PATH=/home/vesper/Dropbox/dev/building_a_debugger/vcpkg/installed
+_VCPKG_INSTALLED_DIR:PATH=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed
+
+//Path to a library.
+pkgcfg_lib_libedit_edit:FILEPATH=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/libedit.a
+
+//Path to a library.
+pkgcfg_lib_libedit_ncurses:FILEPATH=/usr/lib/x86_64-linux-gnu/libncurses.so
 
 //Value Computed by CMake
 sdb_BINARY_DIR:STATIC=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build
@@ -509,6 +543,8 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
@@ -517,22 +553,62 @@ MAKECOMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
-//Install the dependencies listed in your manifest:
-//\n    If this is off, you will have to manually install your dependencies.
-//\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md
-// for more info.
-//\n
-VCPKG_MANIFEST_INSTALL:INTERNAL=OFF
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
 //Making sure VCPKG_MANIFEST_MODE doesn't change
-Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=OFF
+Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=ON
 //Vcpkg root directory
 Z_VCPKG_ROOT_DIR:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/vcpkg
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+__pkg_config_arguments_libedit:INTERNAL=REQUIRED;IMPORTED_TARGET;libedit
+__pkg_config_checked_libedit:INTERNAL=1
+libedit_CFLAGS:INTERNAL=-I/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include;-I/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include/editline
+libedit_CFLAGS_I:INTERNAL=
+libedit_CFLAGS_OTHER:INTERNAL=
+libedit_FOUND:INTERNAL=1
+libedit_INCLUDEDIR:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include
+libedit_INCLUDE_DIRS:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include;/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include/editline
+libedit_LDFLAGS:INTERNAL=-L/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../lib;-ledit;-lncurses
+libedit_LDFLAGS_OTHER:INTERNAL=
+libedit_LIBDIR:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../lib
+libedit_LIBRARIES:INTERNAL=edit;ncurses
+libedit_LIBRARY_DIRS:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../lib
+libedit_LIBS:INTERNAL=
+libedit_LIBS_L:INTERNAL=
+libedit_LIBS_OTHER:INTERNAL=
+libedit_LIBS_PATHS:INTERNAL=
+libedit_MODULE_NAME:INTERNAL=libedit
+libedit_PREFIX:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../..
+libedit_STATIC_CFLAGS:INTERNAL=-I/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include;-I/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include/editline
+libedit_STATIC_CFLAGS_I:INTERNAL=
+libedit_STATIC_CFLAGS_OTHER:INTERNAL=
+libedit_STATIC_INCLUDE_DIRS:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include;/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include/editline
+libedit_STATIC_LDFLAGS:INTERNAL=-L/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../lib;-ledit;-lncurses
+libedit_STATIC_LDFLAGS_OTHER:INTERNAL=
+libedit_STATIC_LIBDIR:INTERNAL=
+libedit_STATIC_LIBRARIES:INTERNAL=edit;ncurses
+libedit_STATIC_LIBRARY_DIRS:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../lib
+libedit_STATIC_LIBS:INTERNAL=
+libedit_STATIC_LIBS_L:INTERNAL=
+libedit_STATIC_LIBS_OTHER:INTERNAL=
+libedit_STATIC_LIBS_PATHS:INTERNAL=
+libedit_VERSION:INTERNAL=3.1
+libedit_libedit_INCLUDEDIR:INTERNAL=
+libedit_libedit_LIBDIR:INTERNAL=
+libedit_libedit_PREFIX:INTERNAL=
+libedit_libedit_VERSION:INTERNAL=
+//ADVANCED property for variable: pkgcfg_lib_libedit_edit
+pkgcfg_lib_libedit_edit-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_libedit_ncurses
+pkgcfg_lib_libedit_ncurses-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../lib
 

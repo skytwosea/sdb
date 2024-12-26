@@ -127,7 +127,7 @@ src/clean: src/CMakeFiles/libsdb.dir/clean
 # Directory level rules for directory test
 
 # Recursive "all" directory target.
-test/all:
+test/all: test/CMakeFiles/tests.dir/all
 .PHONY : test/all
 
 # Recursive "preinstall" directory target.
@@ -135,7 +135,7 @@ test/preinstall:
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
-test/clean:
+test/clean: test/CMakeFiles/tests.dir/clean
 .PHONY : test/clean
 
 #=============================================================================
@@ -932,6 +932,32 @@ sdb: tools/CMakeFiles/sdb.dir/rule
 tools/CMakeFiles/sdb.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/sdb.dir/build.make tools/CMakeFiles/sdb.dir/clean
 .PHONY : tools/CMakeFiles/sdb.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/tests.dir
+
+# All Build rule for target.
+test/CMakeFiles/tests.dir/all: src/CMakeFiles/libsdb.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/tests.dir/build.make test/CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/tests.dir/build.make test/CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/CMakeFiles --progress-num=5,6 "Built target tests"
+.PHONY : test/CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: test/CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# clean rule for target.
+test/CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/tests.dir/build.make test/CMakeFiles/tests.dir/clean
+.PHONY : test/CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

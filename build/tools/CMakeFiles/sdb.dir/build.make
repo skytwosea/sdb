@@ -93,6 +93,8 @@ sdb_EXTERNAL_OBJECTS =
 tools/sdb: tools/CMakeFiles/sdb.dir/sdb.cpp.o
 tools/sdb: tools/CMakeFiles/sdb.dir/build.make
 tools/sdb: src/libsdb.a
+tools/sdb: vcpkg_installed/x64-linux/debug/lib/libedit.a
+tools/sdb: /usr/lib/x86_64-linux-gnu/libncurses.so
 tools/sdb: tools/CMakeFiles/sdb.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vesper/Dropbox/dev/building_a_debugger/sdb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sdb"
 	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sdb.dir/link.txt --verbose=$(VERBOSE)

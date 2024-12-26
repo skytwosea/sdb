@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/vesper/Dropbox/dev/building_a_debugger/sdb/include
+CXX_INCLUDES = -I/home/vesper/Dropbox/dev/building_a_debugger/sdb/include -isystem /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include -isystem /home/vesper/Dropbox/dev/building_a_debugger/sdb/build/vcpkg_installed/x64-linux/debug/lib/pkgconfig/../../../include/editline
 
 CXX_FLAGS = 
 

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/libedit-x64-linux-2024-08-08-40d48ec0-ff58-4d9c-8913-560cca8ed65e",
+  "name": "libedit:x64-linux@2024-08-08 0f7e2bfaaa706e54a76f3ce10eebd7bef2eafda721b47ecf1143b89933e0b6dd",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-12-09-1005b78fa1bf1dde1a20c2734cba4ea61ca94d9a"
+    ],
+    "created": "2024-12-25T22:41:28Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "libedit",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2024-08-08",
+      "downloadLocation": "NOASSERTION",
+      "homepage": "https://thrysoee.dk/editline/",
+      "licenseConcluded": "BSD-4-Clause-UC",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "A command line editor library that provides generic line editing, history, and tokenization functions, similar to those found in GNU Readline.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "libedit:x64-linux",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "0f7e2bfaaa706e54a76f3ce10eebd7bef2eafda721b47ecf1143b89933e0b6dd",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-4-Clause-UC",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "libedit-${REF_SHORT_VERSION_DATE}-3.1.tar.gz",
+      "packageFileName": "libedit-${REF_SHORT_VERSION_DATE}-3.1.tar.gz",
+      "downloadLocation": "https://thrysoee.dk/editline/libedit-${REF_SHORT_VERSION_DATE}-3.1.tar.gz",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "b11d64947f9484bb2320b0fbcfdc94466993af1dfa0d853853b73c222e95d6c1e78d88d0c305929b95bf7a85009129475c9fef0ac8595b43d75543d85052a4ff"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": ".//home/vesper/Dropbox/dev/building_a_debugger/vcpkg/ports/libedit/vcpkg.json",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f333ca014cff3a1c4808365d685a6768a2e9b3b93336bcf5d93332a83d290016"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//home/vesper/Dropbox/dev/building_a_debugger/vcpkg/ports/libedit/portfile.cmake",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "14b96f84624fde47f2340e222f86c35126b8d75a4ac841c77e37f88652175722"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}
