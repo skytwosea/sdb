@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/vesper/Dropbox/dev/building_a_debugger/sdb/src/include -I/home/vesper/Dropbox/dev/building_a_debugger/sdb/include
+CXX_INCLUDES = -I/home/vesper/Dropbox/dev/building_a_debugger/sdb/include -I/home/vesper/Dropbox/dev/building_a_debugger/sdb/src/include
 
 CXX_FLAGS = 
 
