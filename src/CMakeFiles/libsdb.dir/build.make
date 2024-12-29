@@ -69,28 +69,28 @@ include src/CMakeFiles/libsdb.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/libsdb.dir/flags.make
 
-src/CMakeFiles/libsdb.dir/libsdb.cpp.o: src/CMakeFiles/libsdb.dir/flags.make
-src/CMakeFiles/libsdb.dir/libsdb.cpp.o: src/libsdb.cpp
-src/CMakeFiles/libsdb.dir/libsdb.cpp.o: src/CMakeFiles/libsdb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vesper/Dropbox/dev/building_a_debugger/sdb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/libsdb.dir/libsdb.cpp.o"
-	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/libsdb.dir/libsdb.cpp.o -MF CMakeFiles/libsdb.dir/libsdb.cpp.o.d -o CMakeFiles/libsdb.dir/libsdb.cpp.o -c /home/vesper/Dropbox/dev/building_a_debugger/sdb/src/libsdb.cpp
+src/CMakeFiles/libsdb.dir/process.cpp.o: src/CMakeFiles/libsdb.dir/flags.make
+src/CMakeFiles/libsdb.dir/process.cpp.o: src/process.cpp
+src/CMakeFiles/libsdb.dir/process.cpp.o: src/CMakeFiles/libsdb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vesper/Dropbox/dev/building_a_debugger/sdb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/libsdb.dir/process.cpp.o"
+	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/libsdb.dir/process.cpp.o -MF CMakeFiles/libsdb.dir/process.cpp.o.d -o CMakeFiles/libsdb.dir/process.cpp.o -c /home/vesper/Dropbox/dev/building_a_debugger/sdb/src/process.cpp
 
-src/CMakeFiles/libsdb.dir/libsdb.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/libsdb.dir/libsdb.cpp.i"
-	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vesper/Dropbox/dev/building_a_debugger/sdb/src/libsdb.cpp > CMakeFiles/libsdb.dir/libsdb.cpp.i
+src/CMakeFiles/libsdb.dir/process.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/libsdb.dir/process.cpp.i"
+	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vesper/Dropbox/dev/building_a_debugger/sdb/src/process.cpp > CMakeFiles/libsdb.dir/process.cpp.i
 
-src/CMakeFiles/libsdb.dir/libsdb.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/libsdb.dir/libsdb.cpp.s"
-	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vesper/Dropbox/dev/building_a_debugger/sdb/src/libsdb.cpp -o CMakeFiles/libsdb.dir/libsdb.cpp.s
+src/CMakeFiles/libsdb.dir/process.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/libsdb.dir/process.cpp.s"
+	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vesper/Dropbox/dev/building_a_debugger/sdb/src/process.cpp -o CMakeFiles/libsdb.dir/process.cpp.s
 
 # Object files for target libsdb
 libsdb_OBJECTS = \
-"CMakeFiles/libsdb.dir/libsdb.cpp.o"
+"CMakeFiles/libsdb.dir/process.cpp.o"
 
 # External object files for target libsdb
 libsdb_EXTERNAL_OBJECTS =
 
-src/libsdb.a: src/CMakeFiles/libsdb.dir/libsdb.cpp.o
+src/libsdb.a: src/CMakeFiles/libsdb.dir/process.cpp.o
 src/libsdb.a: src/CMakeFiles/libsdb.dir/build.make
 src/libsdb.a: src/CMakeFiles/libsdb.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vesper/Dropbox/dev/building_a_debugger/sdb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsdb.a"

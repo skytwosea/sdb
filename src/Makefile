@@ -185,29 +185,29 @@ libsdb/fast:
 	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/build
 .PHONY : libsdb/fast
 
-libsdb.o: libsdb.cpp.o
-.PHONY : libsdb.o
+process.o: process.cpp.o
+.PHONY : process.o
 
 # target to build an object file
-libsdb.cpp.o:
-	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/libsdb.cpp.o
-.PHONY : libsdb.cpp.o
+process.cpp.o:
+	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/process.cpp.o
+.PHONY : process.cpp.o
 
-libsdb.i: libsdb.cpp.i
-.PHONY : libsdb.i
+process.i: process.cpp.i
+.PHONY : process.i
 
 # target to preprocess a source file
-libsdb.cpp.i:
-	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/libsdb.cpp.i
-.PHONY : libsdb.cpp.i
+process.cpp.i:
+	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/process.cpp.i
+.PHONY : process.cpp.i
 
-libsdb.s: libsdb.cpp.s
-.PHONY : libsdb.s
+process.s: process.cpp.s
+.PHONY : process.s
 
 # target to generate assembly for a file
-libsdb.cpp.s:
-	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/libsdb.cpp.s
-.PHONY : libsdb.cpp.s
+process.cpp.s:
+	cd /home/vesper/Dropbox/dev/building_a_debugger/sdb && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libsdb.dir/build.make src/CMakeFiles/libsdb.dir/process.cpp.s
+.PHONY : process.cpp.s
 
 # Help Target
 help:
@@ -223,9 +223,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... libsdb"
-	@echo "... libsdb.o"
-	@echo "... libsdb.i"
-	@echo "... libsdb.s"
+	@echo "... process.o"
+	@echo "... process.i"
+	@echo "... process.s"
 .PHONY : help
 
 

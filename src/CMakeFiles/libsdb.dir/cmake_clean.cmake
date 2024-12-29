@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/libsdb.dir/libsdb.cpp.o"
-  "CMakeFiles/libsdb.dir/libsdb.cpp.o.d"
+  "CMakeFiles/libsdb.dir/process.cpp.o"
+  "CMakeFiles/libsdb.dir/process.cpp.o.d"
   "libsdb.a"
   "libsdb.pdb"
 )
