@@ -36,3 +36,26 @@ sdb::process::attach(pid_t pid) {
     proc->wait_on_signal();
     return proc;
 }
+
+sdb::process::~process() {
+    if (pid_ != 0) {
+        int status;
+        if (state_ == process_state::running) {
+            kill(pid_, SIGSTOP);
+            waitpid(pid_, &status, 0);
+        }
+        ptrace(PTRACE_DETACH, pid_, nullptr, nullptr);
+        kill(pid_, SIGCONT);
+        if (terminate_on_end) {
+            kill(pid_, SIGKILL);
+            waitpid(pid_, &status, 0);
+        }
+    }
+}
+
+void sdb::process::resume() {
+    if (ptrace(PTRACE_CONT, pid_, nullptr, nullptr) < 0) {
+        error::send_errno("Could not resume");
+    }
+    state_ = process_state::running;
+}
